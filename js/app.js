@@ -5,3 +5,4 @@ function clubSelector(){
     console.log(clubs[randomClub]);
     document.getElementById('club').textContent = clubs[randomClub];
 }
+clubSelector();
