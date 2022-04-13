@@ -5,4 +5,7 @@ function clubSelector(){
     console.log(clubs[randomClub]);
     document.getElementById('club').textContent = clubs[randomClub];
 }
+const header = document.getElementById('club');
+header.style.color = 'green';
+header.style.fontWeight = '800'
 clubSelector();
