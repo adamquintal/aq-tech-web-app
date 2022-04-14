@@ -14,21 +14,15 @@ function resumeGenerator(name){
     return name;
 }
 
-function getRequest(){
-    let request =
 
-    ajax({
-        uri: "https://jsonplaceholder.typicode.com/posts",
-        type: 'GET',
-        dataType: 'json', // added data type
-        success: function(res) {
-            console.log(res);
-            alert(res);
-            document.getElementById('getRequest').textContent = res
-        }
+$(document).ready(function(){
+    $("button").click(function(){
+    $.get("https://jsonplaceholder.typicode.com/posts", function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+        });
     });
-    console.log(request);
-}
+});
+
 
 
 
