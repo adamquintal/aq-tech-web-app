@@ -9,7 +9,7 @@ function clubSelector(){
 function resumeGenerator(name){
 
     if (name = "Adam"){
-        console.log("Your name is" + name)
+        console.log("Your names is" + name)
     }
     return name;
 }
