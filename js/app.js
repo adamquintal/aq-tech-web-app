@@ -16,7 +16,7 @@ function resumeGenerator(name){
 
 function getRequest(uri){
     const Http = new XMLHttpRequest();
-    let uri ='https://jsonplaceholder.typicode.com/posts';
+    uri ='https://jsonplaceholder.typicode.com/posts';
     Http.open ("GET", url);
     Http.send();
     console.log(Http.responseText)
@@ -30,5 +30,6 @@ function getRequest(uri){
 const header = document.getElementById('club');
 header.style.color = 'green';
 header.style.fontWeight = '800'
+
 getRequest();  
 clubSelector();
