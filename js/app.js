@@ -14,13 +14,17 @@ function resumeGenerator(name){
     return name;
 }
 
-function getRequest(uri){
-    const Http = new XMLHttpRequest();
-    uri ='https://jsonplaceholder.typicode.com/posts';
-    Http.open ("GET", uri);
-    Http.send();
-    console.log(Http.responseText)
-    document.getElementById('getRequest').textContent = Http.responseText;
+function getRequest(){
+    $.ajax({
+        uri: "https://jsonplaceholder.typicode.com/posts",
+        type: 'GET',
+        dataType: 'json', // added data type
+        success: function(res) {
+            console.log(res);
+            alert(res);
+            document.getElementById('getRequest').textContent = res
+        }
+    });
 }
 
 
