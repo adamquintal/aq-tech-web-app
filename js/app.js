@@ -15,7 +15,9 @@ function resumeGenerator(name){
 }
 
 function getRequest(){
-    $.ajax({
+    let request =
+
+    ajax({
         uri: "https://jsonplaceholder.typicode.com/posts",
         type: 'GET',
         dataType: 'json', // added data type
@@ -25,6 +27,7 @@ function getRequest(){
             document.getElementById('getRequest').textContent = res
         }
     });
+    console.log(request);
 }
 
 
