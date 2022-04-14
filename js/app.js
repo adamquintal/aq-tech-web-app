@@ -17,7 +17,7 @@ function resumeGenerator(name){
 function getRequest(uri){
     const Http = new XMLHttpRequest();
     uri ='https://jsonplaceholder.typicode.com/posts';
-    Http.open ("GET", url);
+    Http.open ("GET", uri);
     Http.send();
     console.log(Http.responseText)
     document.getElementById('getRequest').textContent = Http.responseText;
